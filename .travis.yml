@@ -5,7 +5,6 @@ R:
   
 # command to install dependencies
 install: 
-  - sudo apt-get update -qq
   - sudo Rscript -e "install.packages('knitr', repos = c('http://yihui.name/xran', 'http://cran.rstudio.org'), type = 'source')"
 
 
