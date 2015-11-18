@@ -6,16 +6,7 @@ python:
 # command to install dependencies
 install: 
   - sudo apt-get update -qq
-  - sudo apt-get install python
-  - sudo apt-get install python-pip python-dev build-essential
-  - sudo pip install --upgrade pip
-  - sudo pip install --upgrade virtualenv
-  - sudo pip install -U pip
-  - sudo python ez_setup.py
-  - sudo pip install --upgrade Pweave
-  - sudo apt-get install python-matplotlib
   - sudo apt-get install nano
-  - sudo apt-get install vim
   - sudo apt-get install aptitude
   - sudo sh -c 'echo "deb http://ftp.iitm.ac.in/cran/bin/linux/ubuntu trusty/" >> /etc/apt/sources.list'
   - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9
@@ -37,29 +28,6 @@ script:
 
   
   
-after_script:
-  - ls
-  - cd manuscript
-  - ls
-  - ls -l *.md | sort -g | awk '{print $9}'
-  - ls *.md | sort -g > Book.txt
-  - cd ..
-  - ls
-  - git init
-  - git remote -v 
-  - git remote remove origin
-  - git remote add origin git@github.com:Wowip/scrum_developer.git  
-  - sudo chmod 600 .ssh/id_rsa
-  - sudo chmod 600 .ssh/id_rsa.pub
-  - ls -a
-  - ls -al .ssh
-  - eval "$(ssh-agent -s)"
-  - ssh-add .ssh/id_rsa
-  - ssh -T git@github.com
-  - git checkout master
-  - git add .
-  - git commit -m "añadiendo pruebas"
-  - git push origin master
 
 
 
