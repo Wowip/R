@@ -1,6 +1,4 @@
 language: r
-R:
-  - "3.0.2"
 
   
 # command to install depende
@@ -10,29 +8,10 @@ R:
   
 # command to run tests
 script: 
-  - sudo Rscript -e "R.version"
   - sudo Rscript -e "library(knitr); knit('ejemplo.Rmd')" 
-  - sudo Rscript -e "library(knitr); knit('ejemplo2.Rmd)"
+  - sudo Rscript -e "library(knitr); knit('ejemplo2.Rmd')"
 
-after_script:
-  - ls
-  - git config --global user.email "arturoinosencio@gmail.com"
-  - git config --global user.name "Wowip"
-  - git init
-  - git remote -v 
-  - git remote remove origin
-  - git remote add origin git@github.com:Wowip/R.git  
-  - sudo chmod 600 .ssh/id_rsa
-  - sudo chmod 600 .ssh/id_rsa.pub
-  - ls -a
-  - ls -al .ssh
-  - eval "$(ssh-agent -s)"
-  - ssh-add .ssh/id_rsa
-  - ssh -T git@github.com
-  - git checkout master
-  - git add .
-  - git commit -m "añadiendo ejemplo en R"
-  - git push origin master
+
 
   
   
