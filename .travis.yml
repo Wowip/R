@@ -1,1 +1,9 @@
 language: r
+sudo: required
+
+install:
+  - sudo install.packages('knitr', repos = c('http://yihui.name/xran', 'http://cran.rstudio.org'),  type = 'source')
+  
+script:
+  - sudo Rscript -e "library(knitr); knit('ejemplo.Rmd')" 
+  - sudo Rscript -e "library(knitr); knit('ejemplo2.Rmd')" 
