@@ -2,7 +2,6 @@ language: r
 
   
 # command to install depende
-  - sudo update.packages(ask = FALSE, repos = 'http://cran.rstudio.org')
   - sudo install.packages('knitr', repos = c('http://yihui.name/xran', 'http://cran.rstudio.org'),  type = 'source')
 
   
