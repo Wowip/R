@@ -1,19 +1,1 @@
 language: r
-  
-  
-  
-# command to run tests
-script: 
-  - sudo Rscript -e "library(knitr); knit('ejemplo.Rmd')" 
-  - sudo Rscript -e "library(knitr); knit('ejemplo2.Rmd')"
-
-
-
-  
-  
-
-
-
-
-
-
