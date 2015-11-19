@@ -1,10 +1,8 @@
 language: r
-
+R:
+  - "3.0.2"
   
-# command to install depende
-
-  - sudo install.packages('knitr', repos = c('http://yihui.name/xran', 'http://cran.rstudio.org'),  type = 'source')
-
+  
   
 # command to run tests
 script: 
