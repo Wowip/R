@@ -25,12 +25,8 @@ A _paragraph_ here. A code chunk below (remember the three backticks):
 It is easy.
 
 ```{r}
-getwd()
-setwd("Documentos/BigDataZacatecas")
-x <- ("Hello")
-y <- ("World!")
-z <- paste(x,y)
-z
+-plot(1:10)
++getwd()
 ```
 
 ## inline code
